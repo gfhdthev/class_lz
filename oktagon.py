@@ -4,7 +4,6 @@
 
 #импортируем библиотеки
 import math
-import matplotlib.path
 import matplotlib.patches
 import matplotlib.pyplot as plt
 
@@ -55,10 +54,11 @@ class Oktagon:
                                                 (-self.mal_r, -self.a/2),
                                                 (-self.mal_r, self.a/2), 
                                                 (-self.a/2, self.mal_r), 
-                                                (self.a/2, self.mal_r)], fill = False)
+                                                (self.a/2, self.mal_r)], 
+                                                fill = False, color = 'green')
 
-        circle1 = matplotlib.patches.Circle((0, 0), radius=self.bol_r, fill = False)  #описанная окружность
-        circle2 = matplotlib.patches.Circle((0, 0), radius=self.mal_r, fill = False) #вписанная окружность
+        circle1 = matplotlib.patches.Circle((0, 0), radius=self.bol_r, fill = False, color = 'red')  #описанная окружность
+        circle2 = matplotlib.patches.Circle((0, 0), radius=self.mal_r, fill = False, color = 'black') #вписанная окружность
         axes.add_patch(circle1)
         axes.add_patch(circle2)
         axes.add_patch(polygon_1)
